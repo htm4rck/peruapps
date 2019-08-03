@@ -1,15 +1,11 @@
-# Peruapps
+# Peruapps - Evaluacion
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+Este Proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
 
 
 Ejecutar ´ng serve` para un servidor de desarrollo. Navegue a `http://localhost:4200/`. La aplicación se volverá a cargar automáticamente si cambia alguno de los archivos de origen.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Further help
 
