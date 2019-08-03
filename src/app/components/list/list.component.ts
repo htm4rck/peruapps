@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataAppService } from 'src/app/service/data-app.service';
 import { UserInterface } from 'src/app/models/user-interface';
 import { ListInterface } from 'src/app/models/list-interface';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-list',
@@ -23,7 +24,8 @@ export class ListComponent implements OnInit {
     });
   }
   onPreUpdate(user:UserInterface):void{
-    this.dataApi.selectedUser = Object.assign({},user)
+    this.dataApi.selectedUser = Object.assign({},user);
+    document.querySelector('#modalTitle').innerHTML='ACTUALIZAR USUARIO';
   }
   ver(id: string):void{
     location.href='detail/'+id;

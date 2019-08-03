@@ -15,6 +15,8 @@ export class ModaluserComponent implements OnInit {
 
   ngOnInit() {
     $('#userModal').on('hidden.bs.modal', function (e) {
+    document.querySelector('#modalTitle').innerHTML='NUEVO USUARIO';
+
       $("#id").val('');
       $("#first_name").val('');
       $("#last_name").val('');
