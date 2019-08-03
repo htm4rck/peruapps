@@ -1,0 +1,36 @@
+<div class="w-100" id='list'>
+  <h4 class="mb-0">Detalle
+    <span class="text-primary"> de Usuario</span>
+  </h4>
+  <br>
+  <button type="button" class="btn btn-sm btn-success mb-3" (click)="volver()">VOLVER</button>
+  <div class="row">
+    <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <table class="table table-responsive-md table-hover">
+
+        <tbody class="border border-info" id="tbodyEmployee">
+          <tr>
+            <td>ID</td>
+            <td>{{user?.data.id}}</td>
+          </tr>
+          <tr>
+            <td>NOMBRE</td>
+            <td>{{user?.data.first_name}}</td>
+          </tr>
+          <tr>
+            <td>APELLIDO</td>
+            <td>{{user?.data.last_name}}</td>
+          </tr>
+          <tr>
+            <td>EMAIL</td>
+            <td>{{user?.data.email}}</td>
+          </tr>
+          <tr>
+            <td>AVATAR</td>
+            <td><img src="{{user?.data.avatar}}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

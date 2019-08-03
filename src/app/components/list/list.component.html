@@ -1,0 +1,42 @@
+<div class="w-100" id='list'>
+  <h4 class="mb-0">Mantenimiento
+    <span class="text-primary"> de Usuarios [{{users?.per_page}}]</span>
+  </h4>
+  <br>
+  <button type="button" class="btn btn-sm btn-success mb-3" data-toggle="modal" data-target="#userModal">Nuevo</button>
+  <div class="row">
+    <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <table class="table table-responsive-md table-hover">
+        <thead class="bg-primary text-white border border-info">
+          <tr>
+            <th>#</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>EMAIL</th>
+            <th class="text-center" colspan="3">OPCIONES</th>
+          </tr>
+        </thead>
+        <tbody class="border border-info" id="tbodyEmployee">
+          <tr *ngFor="let user of users?.data; index as i">
+            <td>{{i+1}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.email}}</td>
+            <td>
+              <button class="btn btn-sm btn-primary" (click)="ver(user.id)">VER</button>
+            </td>
+            <td>
+              <button class="btn btn-sm btn-warning" (click)="onPreUpdate(user)" 
+              data-toggle="modal" data-target="#userModal">EDITAR</button>
+            </td>
+            <td>
+              <button class="btn btn-sm btn-danger disabled">ELIMINAR</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-modaluser></app-modaluser>
+<app-response></app-response>
