@@ -3,6 +3,7 @@ import { DataAppService } from 'src/app/service/data-app.service';
 import {NgForm, FormsModule} from '@angular/forms';
 import {Location} from '@angular/common';
 import { ResponseComponent } from '../response/response.component';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-modaluser',
   templateUrl: './modaluser.component.html',
