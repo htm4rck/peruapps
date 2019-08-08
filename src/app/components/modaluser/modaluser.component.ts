@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataAppService } from 'src/app/service/data-app.service';
 import {NgForm, FormsModule} from '@angular/forms';
 import {Location} from '@angular/common';
-import { ResponseComponent } from '../response/response.component';
-import * as $ from 'jquery';
+declare var $: any;
+
 @Component({
   selector: 'app-modaluser',
   templateUrl: './modaluser.component.html',
@@ -40,6 +40,7 @@ export class ModaluserComponent implements OnInit {
         $("#content2").html('last_name: '+ response.last_name);
         $("#content3").html('correo: '+ response.email);
         $("#content4").html('avatar: '+ response.avatar);
+        $("#content5").html('updateAt: '+ response.updatedAt);
         $("#userModal").modal('hide');
         console.log(response)
       });
@@ -58,6 +59,7 @@ export class ModaluserComponent implements OnInit {
         $("#content2").html('last_name: '+ response.last_name);
         $("#content3").html('correo: '+ response.email);
         $("#content4").html('avatar: '+ response.avatar);
+        $("#content5").html('updateAt: '+ response.updatedAt);
         $("#userModal").modal('hide');
         console.log(response)
       })
